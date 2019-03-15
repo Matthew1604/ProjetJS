@@ -7,9 +7,16 @@
     </head>
 
     <body>
-        <main>
-            <canvas id="firstCanvas"></canvas>
-            <script src="js/javascript.js"></script>
-        </main>
+        <canvas id="firstCanvas"></canvas>
+        <script src="js/personnage.js"></script>
+        <script src="js/zomfesseur.js"></script>
+        <script src="js/etudiant.js"></script>
+        <script src="js/decor.js"></script>  
+        <script>
+            var d = new Decor("firstCanvas", 1200, 600);
+            var fond = new Image();
+            fond.addEventListener("load", d.afficherFond)
+            fond.src = "img/fond.jpg";
+        </script>
     </body>
 </html>

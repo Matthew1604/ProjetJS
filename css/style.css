@@ -1,9 +1,11 @@
 body {
     margin: 0px;
+    background-color: lightcyan;
 }
 
 #firstCanvas {
-    background-color: #3192ca;
+    border: 1px solid black;
+    background-color: lightsteelblue;
     /*width: 100%;
     height: 320px;*/
 }

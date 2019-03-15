@@ -1,7 +1,7 @@
 var canvas = document.getElementById("firstCanvas");
 var context = canvas.getContext("2d");
-var w = window.innerWidth-4;
-var h = window.innerHeight-4;
+canvas.width = window.innerWidth-4;
+canvas.height = window.innerHeight-4;
 var ratio = window.devicePixelRatio;
 
 var sprite = new Image();
@@ -10,8 +10,7 @@ sprite.src = "img/sprite.png";
 var step = 0;
 var prevStep = 0;
 
-canvas.width = w;
-canvas.height = h;
+
 context.scale(ratio, ratio);
 context.imageSmoothingEnabled = false;
 
@@ -29,8 +28,8 @@ function animate() {
 }
 
 function draw() {
-    context.clearRect(0, 0, w, h);
-    drawSprite(w/2, h, 200);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    drawSprite(canvas.width/2, canvas.height, 200);
 }
 
 function drawSprite(x, y, scale) {
