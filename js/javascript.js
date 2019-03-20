@@ -23,6 +23,7 @@ function animate() {
         draw();
         update(0.07);
         requestAnimationFrame(animate);
+
         compt++;
     }
 }

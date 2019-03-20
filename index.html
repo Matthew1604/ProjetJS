@@ -7,16 +7,19 @@
     </head>
 
     <body>
-        <canvas id="firstCanvas"></canvas>
-        <script src="js/personnage.js"></script>
-        <script src="js/zomfesseur.js"></script>
-        <script src="js/etudiant.js"></script>
-        <script src="js/decor.js"></script>  
-        <script>
-            var d = new Decor("firstCanvas", 1200, 600);
-            var fond = new Image();
-            fond.addEventListener("load", d.afficherFond)
-            fond.src = "img/fond.jpg";
-        </script>
+        <main>
+            <canvas id="firstCanvas"></canvas>
+            <script src="js/personnage.js"></script>
+            <script src="js/zomfesseur.js"></script>
+            <script src="js/joueur.js"></script>
+            <script src="js/canvas.js"></script>
+
+            <script>
+                var c = new Canvas("firstCanvas", 1200, 600);
+                c.setBackground("img/menu.png");
+                var joueur = new Joueur(c.canvas);
+                joueur.placer();
+            </script>
+        </main>
     </body>
 </html>
